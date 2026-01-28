@@ -1,0 +1,249 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Delius&display=swap");
+
+@keyframes movimento {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+:root {
+  --Azul-principal: #1248a1;
+  --Rosa-principal: #ed2da0;
+}
+
+body {
+  font-family: "Delius", cursive;
+  background-color: black;
+  text-align: center;
+}
+
+img {
+  width: 80px;
+}
+#estrelas {
+  width: 60px;
+  position: absolute;
+  top: 26%;
+  left: 0;
+
+  transform: rotate(15deg);
+}
+
+#coracao {
+  position: absolute;
+  top: 48%;
+  right: 0px;
+}
+
+#estrela {
+  position: absolute;
+  left: 0;
+  top: 85%;
+  transform: rotate(45deg);
+}
+
+#beijo-rosa {
+  position: absolute;
+  top: 117%;
+  right: 0;
+}
+
+#beijo-azul {
+  position: absolute;
+  top: 142%;
+  left: 0;
+  transform: rotate(30deg);
+}
+
+#gatos2 {
+  position: absolute;
+  top: 180%;
+  right: 0;
+}
+
+#saturno {
+  position: absolute;
+  left: 0;
+  top: 233%;
+}
+
+#cachorros {
+  width: 120px;
+  position: absolute;
+  right: 0;
+  top: 285%;
+}
+
+#aviso {
+  position: absolute;
+  z-index: 1;
+  top: 324%;
+  left: 0;
+  transform: rotate(15deg);
+}
+
+h1 {
+  color: var(--Azul-principal);
+}
+
+h1 > span {
+  color: var(--Rosa-principal);
+}
+
+p {
+  color: var(--Azul-principal);
+}
+
+p span {
+  color: var(--Rosa-principal);
+}
+
+figure {
+  background-color: #1220a1;
+  display: flex;
+  margin: auto;
+  margin-bottom: 20px;
+  height: 200px;
+  width: 70vw;
+
+  box-shadow: 0px 0px 25px var(--Rosa-principal);
+}
+
+figure:nth-child(2n) {
+  box-shadow: 0px 0px 25px var(--Azul-principal);
+}
+
+figcaption {
+  position: absolute;
+  color: var(--Azul-principal);
+  font-weight: bolder;
+  font-size: 1.5em;
+  left: 25%;
+  right: 25%;
+
+  text-shadow: 1px 2px 1px black;
+}
+
+figure:nth-child(2n) figcaption {
+  color: var(--Rosa-principal);
+}
+
+figure img {
+  display: none;
+  width: 80vw;
+  position: absolute;
+}
+
+figure div {
+  flex: auto;
+  background-color: #127aa1;
+  border: 1px solid white;
+  background: black url(meses/abr1.jpeg) center center no-repeat;
+  background-size: cover;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+div:hover img {
+  display: block;
+  right: 8%;
+  z-index: 1;
+  border: 3px solid rgb(255, 51, 173);
+  border-radius: 5px;
+
+  animation: forwards movimento 0.3s ease;
+}
+
+/* Março */
+.mar1 {
+  background-image: url("meses/mar1.jpeg");
+}
+/* Abril */
+.abr1 {
+  background-image: url("meses/abr1.jpeg");
+}
+.abr2 {
+  background-image: url("meses/abr2.jpeg");
+}
+/* Maio */
+.mai1 {
+  background-image: url("meses/mai1.jpeg");
+}
+.mai2 {
+  background-image: url("meses/mai2.jpeg");
+}
+/* Junho */
+.jun1 {
+  background-image: url("meses/jun1.jpeg");
+}
+.jun2 {
+  background-image: url("meses/jun2.jpeg");
+}
+/* Julho */
+.jul1 {
+  background-image: url("meses/jul1.jpeg");
+}
+.jul2 {
+  background-image: url("meses/jul2.jpeg");
+}
+/* Agosto */
+.ago1 {
+  background-image: url("meses/ago1.jpeg");
+}
+.ago2 {
+  background-image: url("meses/ago2.jpeg");
+}
+/* Setembro */
+.set1 {
+  background-image: url("meses/set1.jpeg");
+}
+.set2 {
+  background-image: url("meses/set2.jpeg");
+}
+/* Outubro */
+.out1 {
+  background-image: url("meses/out1.jpeg");
+}
+.out2 {
+  background-image: url("meses/out2.jpeg");
+}
+/* Novembro */
+.nov1 {
+  background-image: url("meses/nov1.jpeg");
+}
+.nov2 {
+  background-image: url("meses/nov2.jpeg");
+}
+/* Dezembro */
+.dez1 {
+  background-image: url("meses/dez1.jpeg");
+}
+.dez2 {
+  background-image: url("meses/dez2.jpeg");
+}
+/* Janeiro */
+.jan1 {
+  background-image: url("meses/jan1.jpeg");
+}
+
+.jan2 {
+  background-image: url("meses/jan2.jpeg");
+}
+
+section audio::-webkit-media-controls-panel {
+  background-color: var(--Azul-principal);
+}
+section audio::-webkit-media-controls-play-button {
+  background-color: var(--Rosa-principal);
+  border-radius: 50%;
+}
+section audio::-webkit-media-controls-volume-slider {
+  background-color: var(--Rosa-principal);
+  border-radius: 5px;
+}
